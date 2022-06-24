@@ -3,7 +3,7 @@ import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
 
 const Container = styled.div`
-    height: 60px;
+    height: 70px;
 `
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -36,6 +36,7 @@ const Center = styled.div`
 `
 const Logo = styled.h1`
     font-weight: bold;
+    font-size: 40px;
 `
 const Right = styled.div`
     flex:1;
