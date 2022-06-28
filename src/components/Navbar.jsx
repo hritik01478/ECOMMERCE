@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     height: 70px;
@@ -60,7 +61,6 @@ const MenuItem = styled.div`
 `
 
 
-
 const Navbar = () => {
     return (
         <Container>
@@ -72,16 +72,22 @@ const Navbar = () => {
                         <Search style={{ color: "gray", fontSize: "16px" }} />
                     </SearchContainer>
                 </Left>
-                <Center><Logo>Amazon</Logo></Center>
+                <Center><Logo>E - Shopy</Logo></Center>
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN UP</MenuItem>
-                    <MenuItem>
-                        <Badge badgeContent={4} color="primary">
-                            <ShoppingCartOutlined />
+                    <Link to="/register" style={{ textDecoration: "none" }}>
+                        <MenuItem>REGISTER</MenuItem>
+                    </Link>
+                    <Link to="/login" style={{ textDecoration: "none" }}>
+                        <MenuItem>SIGN IN</MenuItem>
+                    </Link>
+                    <Link to="/cart" style={{ color: "black" }}>
+                        <MenuItem>
+                            <Badge badgeContent={4} color="primary">
+                                <ShoppingCartOutlined />
 
-                        </Badge>
-                    </MenuItem>
+                            </Badge>
+                        </MenuItem>
+                    </Link>
                 </Right>
             </Wrapper>
         </Container>
